@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DatePickerView" customModule="nodeadsTestApp" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="pXF-rf-9xS" id="H7M-0d-MEp"/>
+                <outlet property="viewToShow" destination="pXF-rf-9xS" id="6Ko-8J-stb"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Rfe-Po-SUf" customClass="DatePickerView" customModule="nodeadsTestApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QxM-ZW-nhq">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="pXF-rf-9xS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="5bS-a8-87B">
+                                <rect key="frame" x="0.0" y="215" width="375" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="513708394.00409198">
+                                    <!--2017-04-12 16:46:34 +0000-->
+                                </date>
+                                <connections>
+                                    <action selector="pickDate:" destination="Rfe-Po-SUf" eventType="valueChanged" id="wzn-kr-4L8"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wEf-ot-563">
+                                <rect key="frame" x="127" y="439" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="120" id="jAU-Dq-2Gh"/>
+                                </constraints>
+                                <state key="normal" title="Done"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="9"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="doneButton:" destination="Rfe-Po-SUf" eventType="touchUpInside" id="Hu4-nB-fOc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="5bS-a8-87B" firstAttribute="centerY" secondItem="pXF-rf-9xS" secondAttribute="centerY" id="Vjd-Uj-gbF"/>
+                            <constraint firstAttribute="trailing" secondItem="5bS-a8-87B" secondAttribute="trailing" id="W7g-m9-c56"/>
+                            <constraint firstItem="wEf-ot-563" firstAttribute="top" secondItem="5bS-a8-87B" secondAttribute="bottom" constant="8" symbolic="YES" id="aKJ-ef-5T8"/>
+                            <constraint firstItem="5bS-a8-87B" firstAttribute="leading" secondItem="pXF-rf-9xS" secondAttribute="leading" id="eVv-Wh-Qqf"/>
+                            <constraint firstItem="5bS-a8-87B" firstAttribute="centerX" secondItem="pXF-rf-9xS" secondAttribute="centerX" id="taL-Ux-xKE"/>
+                            <constraint firstItem="5bS-a8-87B" firstAttribute="centerX" secondItem="wEf-ot-563" secondAttribute="centerX" id="xnF-Tb-jwx"/>
+                        </constraints>
+                    </view>
+                    <blurEffect style="light"/>
+                </visualEffectView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QxM-ZW-nhq" secondAttribute="bottom" id="0Qi-0S-lP3"/>
+                <constraint firstItem="QxM-ZW-nhq" firstAttribute="top" secondItem="Rfe-Po-SUf" secondAttribute="top" constant="20" id="JFS-cY-d1G"/>
+                <constraint firstAttribute="trailing" secondItem="QxM-ZW-nhq" secondAttribute="trailing" id="iCI-Ln-sRG"/>
+                <constraint firstItem="QxM-ZW-nhq" firstAttribute="leading" secondItem="Rfe-Po-SUf" secondAttribute="leading" id="mIA-W0-azh"/>
+            </constraints>
+            <connections>
+                <outlet property="datePicker" destination="5bS-a8-87B" id="Qzh-8H-JZT"/>
+            </connections>
+            <point key="canvasLocation" x="25.5" y="45.5"/>
+        </view>
+    </objects>
+</document>
